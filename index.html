@@ -213,22 +213,25 @@
             }
             // Calculate relative luminance https://www.w3.org/TR/2008/REC-WCAG20-20081211/#relativeluminancedef
             var red = parseInt(rgb.substring(0,2), 16) / 255;
+            var r = 0;
             if (red <= 0.03928) {
-                var r = red / 12.92;
+                r = red / 12.92;
             } else {
-                var r = ((red + 0.055) / 1.055) ** 2.4;
+                r = ((red + 0.055) / 1.055) ** 2.4;
             }
             var green = parseInt(rgb.substring(2,4), 16) / 255;
+            var g = 0;
             if (green <= 0.03928) {
-                var g = green / 12.92;
+                g = green / 12.92;
             } else {
-                var g = ((green + 0.055) / 1.055) ** 2.4;
+                g = ((green + 0.055) / 1.055) ** 2.4;
             }
             var blue = parseInt(rgb.substring(4,6), 16) / 255;
+            var b = 0;
             if (blue <= 0.03928) {
-                var b = blue / 12.92;
+                b = blue / 12.92;
             } else {
-                var b = ((blue + 0.055) / 1.055) ** 2.4;
+                b = ((blue + 0.055) / 1.055) ** 2.4;
             }
 
             var luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
