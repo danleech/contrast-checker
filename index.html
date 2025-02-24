@@ -148,12 +148,12 @@
         function generateswatches() {
             var foregrounds = document.querySelector("#foregrounds").value;
             var backgrounds = document.querySelector("#backgrounds").value;
-            var foregrounds = foregrounds.match(/#[0-9|A-F|a-f]{3,6}/g);
-            var backgrounds = backgrounds.match(/#[0-9|A-F|a-f]{3,6}/g);
+            foregrounds = foregrounds.match(/#[0-9|A-F|a-f]{3,6}/g);
+            backgrounds = backgrounds.match(/#[0-9|A-F|a-f]{3,6}/g);
             var foregroundColors = removeDups(foregrounds);
             var backgroundColors = removeDups(backgrounds);
-            var foregroundColors = foregroundColors.sort();
-            var backgroundColors = backgroundColors.sort();
+            foregroundColors = foregroundColors.sort();
+            backgroundColors = backgroundColors.sort();
             var swatches = "";
             backgroundColors.forEach(function(backgroundColor) {
                 var backgroundLuminance = getLuminance(backgroundColor);
