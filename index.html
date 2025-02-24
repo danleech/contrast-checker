@@ -162,7 +162,7 @@
                     var contrastRatio = (Math.max(foregroundLuminance, backgroundLuminance) + 0.05) / (Math.min(foregroundLuminance, backgroundLuminance) + 0.05);
                     var radioButtons = document.getElementsByName("threshold");
                     var threshold = "";
-                    for (var i = 0; i < radioButtons.length; i++) {
+                    for (let i of radioButtons) {
                         if (radioButtons[i].checked) threshold = radioButtons[i].value;
                     }
                     if ((threshold == "aa-ui" && contrastRatio >= 3) || (threshold == "aa-text" && contrastRatio >= 4.5) || (threshold == "aaa-text" && contrastRatio >= 7) || threshold == "all") {
