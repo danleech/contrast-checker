@@ -163,7 +163,7 @@
                     var radioButtons = document.getElementsByName("threshold");
                     var threshold = "";
                     for (let i of radioButtons) {
-                        if (radioButtons[i].checked) threshold = radioButtons[i].value;
+                        if (i.checked) threshold = i.value;
                     }
                     if ((threshold == "aa-ui" && contrastRatio >= 3) || (threshold == "aa-text" && contrastRatio >= 4.5) || (threshold == "aaa-text" && contrastRatio >= 7) || threshold == "all") {
                         swatches += "<li><span style='background-color:" + backgroundColor + ";color:" + foregroundColor + "'>Sample text</span>";
